@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "328267752482",
+    "project_id": "spendpal-1e6ba",
+    "storage_bucket": "spendpal-1e6ba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328267752482:android:54a6f370d87cdf35d0167b",
+        "android_client_info": {
+          "package_name": "com.example.spendpal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9QmAakwZOnKWezWNGLPKEPZvlXCgkfao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

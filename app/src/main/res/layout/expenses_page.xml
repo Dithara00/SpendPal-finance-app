@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/incomeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#65A9F6"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SpendPal"
+                android:textSize="32sp"
+                android:textStyle="bold|italic"
+                android:textColor="#283593" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take control of your finances"
+                android:textSize="12sp"
+                android:textColor="#283593" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General Expenses"
+                android:textColor="#1565C0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <!-- Pie Chart -->
+            <com.example.spendpal.CustomPieChartView
+                android:id="@+id/customPieChart"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"/>
+
+            <!-- Highest Expense -->
+            <TextView
+                android:id="@+id/tvHighestExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You had spent more money on -"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#D32F2F"
+                android:gravity="center" />
+
+            <!-- Least Expense -->
+            <TextView
+                android:id="@+id/tvLeastExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You had spent less money on -"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#388E3C"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+
+            <!-- Expense List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/expenseRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Add Expense Button -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginStart="175dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnAddExpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADD EXPENSE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#2196F3" />
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2196F3"
+        android:gravity="center_vertical|end"
+        android:paddingEnd="8dp">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#283593"
+            android:textStyle="bold"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+</LinearLayout>
