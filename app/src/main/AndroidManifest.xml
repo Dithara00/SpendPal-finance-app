@@ -12,54 +12,48 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Spendpal"
         tools:targetApi="31">
-
+        <activity
+            android:name=".RewardsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".SignupActivity"
             android:exported="false" />
-
         <activity
             android:name=".AddExpenseActivity"
             android:exported="false" />
-
         <activity
             android:name=".EditIncomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".EditExpensesActivity"
             android:exported="false" />
-
         <activity
             android:name=".AddIncomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".IncomePageActivity"
             android:exported="false" />
-
         <activity
             android:name=".ExpensePageActivity"
             android:exported="false" />
-
         <activity
             android:name=".SavingsPageActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-
-    <activity
-        android:name=".LoginActivity"
-        android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

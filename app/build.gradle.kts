@@ -37,6 +37,9 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:24.10.0")
     implementation("com.github.PhilJay:MPAndroidChart:3.1.0")
 
+    implementation ("com.google.android.material:material:1.9.0")
+
+
 
     implementation ("androidx.activity:activity:1.8.0")
 

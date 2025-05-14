@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rewardsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAFAFA">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="8dp"
+        android:background="#65A9F6"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SpendPal"
+                android:textSize="28sp"
+                android:textStyle="bold|italic"
+                android:textColor="#283593" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take control of your finances"
+                android:textSize="12sp"
+                android:textColor="#283593" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/profileIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎉 CONGRATULATIONS!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#283593"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/starsEarnedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You earned 3 stars"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Stars Row -->
+            <LinearLayout
+                android:id="@+id/starLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+                <!-- Add star icons dynamically from Java -->
+            </LinearLayout>
+
+            <!-- Illustration -->
+            <ImageView
+                android:id="@+id/personImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+            android:layout_marginBottom="16dp" />
+
+            <!-- Progress bar -->
+            <ProgressBar
+                android:id="@+id/starProgressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:progress="3"
+                android:max="7"
+                android:layout_marginBottom="4dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressTint="#FFD700"
+                android:background="#E0E0E0" />
+
+            <TextView
+                android:id="@+id/starProgressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★ 3 / 7"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Points, Tasks, Goals -->
+            <TextView
+                android:id="@+id/pointsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Points: 0"
+                android:textSize="18sp"
+                android:textColor="#4CAF50"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tasksCompletedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tasks Completed: 0"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/goalsCompletedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goals Completed: 0"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Motivational Tip Box -->
+            <TextView
+                android:id="@+id/tipBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0F7FA"
+                android:padding="12dp"
+                android:text="💡 Earn more stars by completing more tasks..."
+                android:textColor="#00796B"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer with Back -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#2196F3"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="16dp">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:background="@android:color/transparent"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
