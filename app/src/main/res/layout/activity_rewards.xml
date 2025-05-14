@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="You earned 3 stars"
                 android:textSize="18sp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="10dp" />
 
             <!-- Stars Row -->
             <LinearLayout
@@ -84,19 +84,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="5dp">
                 <!-- Add star icons dynamically from Java -->
             </LinearLayout>
 
             <!-- Illustration -->
-            <ImageView
-                android:id="@+id/personImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-
-            android:layout_marginBottom="16dp" />
 
             <!-- Progress bar -->
+            <ImageView
+                android:id="@+id/personImage"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/image" />
+
             <ProgressBar
                 android:id="@+id/starProgressBar"
                 android:layout_width="200dp"
@@ -122,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:text="Total Points: 0"
                 android:textSize="18sp"
-                android:textColor="#4CAF50"
+                android:textColor="#2196F3"
                 android:layout_marginBottom="8dp" />
 
             <TextView
@@ -144,10 +145,10 @@
                 android:id="@+id/tipBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#E0F7FA"
+                android:background="#B2D7F4"
                 android:padding="12dp"
                 android:text="💡 Earn more stars by completing more tasks..."
-                android:textColor="#00796B"
+                android:textColor="#2196F3"
                 android:textSize="14sp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="12dp"

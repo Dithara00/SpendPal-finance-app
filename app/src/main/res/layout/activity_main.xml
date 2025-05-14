@@ -38,6 +38,16 @@
                 android:textColor="#283593" />
         </LinearLayout>
 
+        <!-- Rewards Icon -->
+        <ImageView
+            android:id="@+id/rewardsIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:contentDescription="Rewards" />
+
+        <!-- Profile Icon -->
         <ImageView
             android:id="@+id/profileIcon"
             android:layout_width="24dp"
@@ -53,8 +63,6 @@
         android:layout_weight="1"
         android:fillViewport="true">
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +71,6 @@
             android:gravity="center_horizontal">
 
             <!-- Bar Chart Section -->
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,15 +154,8 @@
                         android:textColor="#388E3C"
                         android:textSize="12sp"
                         android:layout_gravity="end" />
-
-
-
                 </LinearLayout>
-
-                <!-- Total Expenses -->
-
             </LinearLayout>
-
 
             <!-- Buttons Section -->
             <LinearLayout
@@ -217,12 +217,7 @@
                     android:backgroundTint="#2196F3"
                     android:layout_marginStart="6dp" />
             </LinearLayout>
-
-
-
-
         </LinearLayout>
-
     </ScrollView>
 
     <!-- Footer -->
@@ -242,6 +237,5 @@
             android:textStyle="bold"
             android:background="@android:color/transparent" />
     </LinearLayout>
-
 
 </LinearLayout>

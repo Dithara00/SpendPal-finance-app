@@ -31,19 +31,19 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar savingsProgressBar, expensesProgressBar;
     private TextView savingsPercentText, expensesPercentText;
     private Button btnIncome, btnExpense, btnToday, btnGoals, logoutBtn;
-    private ImageView profileIcon;
+    private ImageView profileIcon, rewardsIcon;
 
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
     private double totalIncome = 0;
     private double totalExpense = 0;
-    private double savingsGoal = 10000.0; // Can be made dynamic
+    private double savingsGoal = 10000.0; // Example goal
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); // Ensure this XML matches yours
 
         // Firebase init
         mAuth = FirebaseAuth.getInstance();
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         btnGoals = findViewById(R.id.btnGoals);
         logoutBtn = findViewById(R.id.logoutBtn);
         profileIcon = findViewById(R.id.profileIcon);
+        rewardsIcon = findViewById(R.id.rewardsIcon);
 
         // Button listeners
         btnIncome.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, IncomePageActivity.class)));
@@ -71,9 +72,11 @@ public class MainActivity extends AppCompatActivity {
             mAuth.signOut();
             finishAffinity();
         });
-        profileIcon.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProfileActivity.class)));
 
-        // Load and visualize data
+        profileIcon.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ProfileActivity.class)));
+        rewardsIcon.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, RewardsActivity.class)));
+
+        // Load financial data
         loadFinancialData();
     }
 
@@ -85,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
 
         String userId = currentUser.getUid();
 
-        // Fetch Income
-        CollectionReference incomesRef = db.collection("incomes");
-        incomesRef.whereEqualTo("userId", userId)
+        // Fetch income
+        db.collection("incomes")
+                .whereEqualTo("userId", userId)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -104,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void fetchExpenses(String userId) {
-        CollectionReference expensesRef = db.collection("expenses");
-        expensesRef.whereEqualTo("userId", userId)
+        db.collection("expenses")
+                .whereEqualTo("userId", userId)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -176,6 +179,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         barChart.animateY(1000);
-        barChart.invalidate(); // Refresh the chart
+        barChart.invalidate(); // Refresh
     }
 }
